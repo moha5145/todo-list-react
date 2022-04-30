@@ -13,13 +13,14 @@ function App() {
   const [tasks, setTasks] = useState([])
 
   const [isDark, setIsDark] = useState(false)
+  const [isChecked, setIsChecked] = useState(false)
   return (
     <div className="App" style={{backgroundColor: isDark === true ? "black": "white", color: isDark === true ? "white": "black"}}>
       <Header isDark={isDark} setIsDark={setIsDark} />
       <main className="main-container">
 
-        <Tasks tasks={tasks} setTasks={setTasks}/>
-       <AddTask task={task} setTask={setTask} tasks={tasks} setTasks={setTasks}/>
+        <Tasks tasks={tasks} setTasks={setTasks} isChecked={isChecked} setIsChecked={setIsChecked}/>
+        <AddTask task={task} setTask={setTask} tasks={tasks} setTasks={setTasks}/>
       </main>
 
       <Footer />

@@ -1,12 +1,17 @@
-const Tasks = ({tasks, setTasks})=> {
+const Tasks = ({tasks, setTasks, isChecked, setIsChecked})=> {
     return <div >
         {tasks.map((task, index)=> {
             return <div key={index} className="tasks">
 
-            <input type="checkbox"></input>
-            <p>{task}</p>
+            <input type="checkbox" onClick={() => {
+                setIsChecked((prevState) => !prevState)
+                console.log(isChecked)
+            }}></input>
+            <p style={{textDecoration: isChecked ? "line-through": "none"}}>{task}</p>
 
-            <button><i className="fa-solid fa-trash trash"></i></button>
+            <button onClick={()=> {
+                
+            }}><i className="fa-solid fa-trash trash"></i></button>
             </div>
         })
     }
