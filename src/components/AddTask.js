@@ -8,11 +8,15 @@ const AddTask = ({task, setTask, tasks, setTasks})=> {
         />
         <button 
             onClick={() => {
-                const newTask = [...tasks]
-                newTask.push(task)
-                setTasks(newTask)
-                setTask('')
+                
+                setTasks((prevState) => [...prevState, task])
+                // let clearInput = task
+                // clearInput = ''
+                setTask("")
+                console.log(task)
             }}
+
+            
         >Add Task</button>
 
     </div>

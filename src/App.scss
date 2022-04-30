@@ -8,8 +8,12 @@
   border: 1px solid #E5E5E5;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 8px;
 
+  div {
+    display: flex;
+  }
   .icon {
     font-size: 82px;
     color: #5C48D3;
@@ -21,6 +25,16 @@
     font-weight: 400;
     line-height: 192px;
   }
+
+  .dark-mode {
+    margin-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .dark-mode:hover {
+    opacity: 0.7;
+  }
+  
 }
 
 .main-container {
@@ -40,7 +54,7 @@
   margin-bottom: 15px;
 
   input{}
-  input[type=checkbox]:checked {
+  input[type=checkbox]:focus {
     background: #5C48D3;
   }
   button {

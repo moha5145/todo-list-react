@@ -11,9 +11,11 @@ import Tasks from './components/Tasks';
 function App() {
   const [task, setTask]= useState('')
   const [tasks, setTasks] = useState([])
+
+  const [isDark, setIsDark] = useState(false)
   return (
-    <div className="App">
-      <Header />
+    <div className="App" style={{backgroundColor: isDark === true ? "black": "white", color: isDark === true ? "white": "black"}}>
+      <Header isDark={isDark} setIsDark={setIsDark} />
       <main className="main-container">
 
         <Tasks tasks={tasks} setTasks={setTasks}/>
