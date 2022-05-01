@@ -13,11 +13,12 @@
 
   div {
     display: flex;
+    align-items: center;
   }
   .icon {
     font-size: 82px;
     color: #5C48D3;
-    margin: 60px;
+    margin: 1.5rem;
   }
 
   h1 {
@@ -50,7 +51,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // gap: 10px;
   margin-bottom: 15px;
 
   input{}
@@ -60,6 +60,10 @@
   button {
     background:none;
     border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.7;
   }
   .trash {
     color: #5C48D3;
@@ -84,6 +88,10 @@
     border-radius: 10px;
     color: white;
     border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.7;
   }
 }
 
@@ -95,3 +103,61 @@
    }
 }
 
+
+
+@media(max-width: 650px) {
+  .header {
+    height: 132px;
+
+    .icon {
+      font-size: 55px;
+      margin: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 38px;
+    }
+  
+  }
+
+  .add-task { 
+    input {
+      width: 230px;
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .header {
+    height: 80px;
+    padding: 4px;
+  
+    .icon {
+      font-size: 35px;
+      margin: 1rem;
+    }
+  
+    h1 {
+      font-size: 28px;
+      line-height: 100px;
+    }
+  
+    .dark-mode {
+      margin-right: 10px;
+      font-size: 25px;
+    }    
+  }
+
+  .main-container {
+    height: 70vh;
+  
+  }
+
+  .add-task {
+  
+    input {
+      width: 160px;
+      margin-right: 18px;
+    }
+  }
+}

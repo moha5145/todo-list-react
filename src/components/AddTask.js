@@ -8,12 +8,12 @@ const AddTask = ({task, setTask, tasks, setTasks})=> {
         />
         <button 
             onClick={() => {
-                
-                setTasks((prevState) => [...prevState, task])
+                const todo= { task: task, isChecked: false}
+                setTasks((prevState) => [...prevState, todo])
                 // let clearInput = task
                 // clearInput = ''
-                setTask("")
-                console.log(task)
+                // setTask("")
+                console.log(tasks)
             }}
 
             
