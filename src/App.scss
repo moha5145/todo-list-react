@@ -39,21 +39,22 @@
 }
 
 .main-container {
-  height: 60vh;
+  // height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
+  margin-top: 30px;
 }
 
 .tasks {
-  width: 360px;
+  width: 330px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
 
-  input{}
+  
   input[type=checkbox]:focus {
     background: #5C48D3;
   }
