@@ -3,17 +3,18 @@ import axios from 'axios'
 const AddTask = ({task, setTask, tasks, setTasks})=> {
     const addTaskHandler =(event) => {
         event.preventDefault()
-        const todo= { task: task, isChecked: false}
+        let isChecked = false
+        const todo= { task: task, isChecked: isChecked}
         setTasks((prevState) => [...prevState, todo])
-        setTask('')
-        axios.post('http://localhost:4000/add-task', {
-                tasks
-            }).then((response) => {
-                    console.log(response)
-                })
-            }
+        axios.post('https://todo-back-moha.herokuapp.com//add-task', {
+                task, isChecked
+        }).then((response) => {
+                console.log(response)
+                setTask('')
+            })
+        }
             
-            return <div className="add-task">
+    return <div className="add-task">
         <form onSubmit={(event) => {
             addTaskHandler(event)
             }}>

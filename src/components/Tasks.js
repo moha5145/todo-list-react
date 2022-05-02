@@ -7,11 +7,11 @@ const Tasks = ({tasks, setTasks})=> {
             const fetchData= async () => {
                 
                 console.log('effect')
-                const response = await axios.get('http://localhost:4000/get-tasks')
+                const response = await axios.get('https://todo-back-moha.herokuapp.com//get-tasks')
                 setTasks(response.data)
             }
             fetchData()
-    }, [setTasks]);
+    }, []);
 
     const checkboxHandler = (index)=> {
         let copiedTasks = [...tasks]
